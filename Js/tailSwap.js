@@ -5,6 +5,36 @@
 // Solution
 
 function tailSwap(arr) {
+    let a0 = '';
+    let a1 = '';
+    let b0 = '';
+    let b1 = '';
+    for (let i = 0; i < arr[0].indexOf(':'); i++) {
+      if (arr[0][i] != ':') {
+        a0 += arr[0][i];
+      } 
+    }
+    for (let i = arr[0].indexOf(':'); i < arr[0].length; i++) {
+      if (arr[0][i]) {
+        a1 += arr[0][i];
+      } 
+    }
+     for (let i = 0; i < arr[1].indexOf(':'); i++) {
+      if (arr[1][i] != ':') {
+        b0 += arr[1][i];
+      } 
+    }
+    for (let i = arr[1].indexOf(':'); i < arr[1].length; i++) {
+      if (arr[1][i]) {
+        b1 += arr[1][i];
+      } 
+    }
+    return [a0 + b1, b0 + a1]
+}
+
+// Another
+
+function tailSwap(arr) {
     let newArr = arr
     .map(string => string.split(':'))
     return [newArr[0][0]+':'+newArr[1][1], newArr[1][0]+':'+newArr[0][1]];

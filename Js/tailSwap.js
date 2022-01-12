@@ -34,3 +34,10 @@ function tailSwap(arr) {
     return [`${a[0]}:${b[1]}`, `${b[0]}:${a[1]}`]
     
 }
+
+// Another
+
+function tailSwap(arr) {
+    let matriz = arr.join(':').split(':')
+    return [matriz[0] + ':' + matriz[3], matriz[2] + ':' + matriz[1]]
+}

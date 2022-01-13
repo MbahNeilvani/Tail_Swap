@@ -24,3 +24,13 @@ function tailSwap(arr) {
     const [[a,b],[c,d]] = arr.map(x => x.split(':'))
     return [`${a}:${d}`, `${c}:${b}`]
 }
+
+// Another 
+
+function tailSwap(arr) {
+    let a = arr[0].split(':')
+    let b = arr[1].split(':')
+    
+    return [`${a[0]}:${b[1]}`, `${b[0]}:${a[1]}`]
+    
+}
